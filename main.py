@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect
 import smtplib
-import time
 
 
 
@@ -10,14 +9,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template('cover/index.html')
+    return render_template('client/index.html')
 
 @app.route("/client")
 def client():
     return render_template("client/index.html")
 
 
-@app.route("/student")
+@app.route("/candidates")
 def student():
     return render_template("student/index.html")
 
